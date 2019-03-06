@@ -106,4 +106,30 @@ cal.left(3838,234)
 #Github.com
 
 
+#Github.com
+
+#dovelet.com - prime number
+
+a = int(input())
+
+flag = True
+
+for i in range(2,a):
+
+    if(a%i == 0):
+        flag = False
+        break
+
+if(flag == False):
+    print('not prime')
+else :
+    print('prime')
+
+
+
+a = float(input())
+
+F = ((9.0/5) * a) + 32
+
+print(F)
 
