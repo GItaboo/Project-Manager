@@ -1,0 +1,35 @@
+import torch
+import torch.nn as nn
+
+# data, model. output update
+
+# X and Y data
+
+#torch, tensor([1,2,3]),float()
+#.float()
+x_train = torch.tensor([1,2,3]).float()
+y_train = torch.tensor([1,2,3]).float()
+
+#Model H(x) = Wx + b
+class LinearRegressionModel(torch.nn.Module):
+    def __init__(self, input_dim, output_dim):
+        super(LinearRegressionModel, self).__init__()
+        self.linear = nn.Linear(input_dim, output_dim)
+    def forward(self,x):
+        out = self.linear(x)
+        return out
+model = LinearRegressionModel(3,3)
+print(model)
+cost=nn.MSELoss()
+optim=torch.optim.SGD(model.parameters(),lr=0.01)
+
+#our hypothesis
+for epoch in range(400):
+    diff = model(x_train)
+    print("diff value", diff)
+    optim.zero_grad()
+    output = model.forward(x_train)
+    loss = cost(output,y_train)
+    loss.backward()
+    optim.step()
+    print(loss)
