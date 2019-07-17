@@ -1,0 +1,5 @@
+,Name,Time_make,Start_time,End_time,Make,running_time,time per movie
+3,d,9000,1,50,30,49,300.0
+0,a,7000,15,30,10,15,700.0
+2,c,7000,20,60,10,40,700.0
+1,b,6000,30,40,20,10,300.0
