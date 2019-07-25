@@ -1,0 +1,33 @@
+'''
+# Fibonacci by using List
+
+matrix = []
+
+a = int(input())
+
+for i in range(a+1):
+    matrix.append(0)
+
+matrix[0]=0
+matrix[1]=1
+
+for i in range(2, a+1):
+    matrix[i] = matrix[i-2] + matrix[i-1]
+'''
+
+quiz = []
+a = int(input())
+
+for j in range(a+1):
+    quiz.append(0)
+
+quiz[0] = 0
+quiz[1] = 1
+quiz[2] = 2
+quiz[3] = 4
+
+
+for j in range(4, a+1):
+    quiz[j] = quiz[j-1] + quiz[j-2] + quiz[j-3]
+
+print(quiz[a])
